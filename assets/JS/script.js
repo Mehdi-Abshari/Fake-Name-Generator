@@ -3,45 +3,54 @@
 let genderSelect = document.querySelector("#gender-select"),
   // Selecting generator button
   generateBtn = document.querySelector("#generate-btn"),
-  container = document.querySelector(".container");
+  container = document.querySelector(".container"),
+  body = document.querySelector("body");
 
 // --> Events
 // Event for when click at generateBtn button
-generateBtn.addEventListener("click", showingFakeProfile);
+generateBtn.addEventListener("click", genderCheck);
 
 // --> Functions
 // Function for show fake profile
-function showingFakeProfile(response) {
+function genderCheck() {
   // User select value
   let userSelGender = genderSelect.value;
 
   if (!(userSelGender === "select")) {
     if (userSelGender === "male") {
-      API("https://api.namefake.com/english-states/male")
+      API("https://api.namefake.com/english-states/male").then((response) => {
+        body.innerHTML = showProfile(response, userSelGender);
+      });
     } else {
-      API("https://api.namefake.com/english-states/female")
+      API("https://api.namefake.com/english-states/female").then((response) => {
+        body.innerHTML = showProfile(response, userSelGender);
+        console.log(response);
+      });
     }
 
-    container.style.display = 'none';
-
-    return (`
-    <div class="result">
-     <div class="title">
-      <h2>Hear your fake profile :</h2>
-     </div>
-     <div id="fake-id">
-      <div class="fake-id">Name: <span>${response.name}</span></div>
-      <div class="fake-id">Family: <span>${response.family}</span></div>
-      <div class="fake-id">Gender: <span>${userSelGender}</span></div>
-      <div class="fake-id">address: <span>${response.address}</span></div>
-      <div class="fake-id">Weight: <span>${response.weight}</span></div>
-      <div class="fake-id">Phone number: <span></span></div>
-      <div class="fake-id">Birthday: <span></span></div>
-     </div>
-    </div>
-    `)
-
-  }else {
-    alert('Please Select one gender');
+    // Change container display
+    container.style.display = "none";
+  } else {
+    alert("Please Select one gender");
   }
+}
+
+// Function for create result page 
+function showProfile(response, userSelGender) {
+  return `
+  <div class="result">
+   <div class="title">
+    <h2>Hear your fake profile :</h2>
+   </div>
+   <div id="fake-id">
+    <div class="fake-id">Name : <span>${response.name}</span></div>
+    <div class="fake-id">Gender : <span>${userSelGender}</span></div>
+    <div class="fake-id">Age : <span>${response.bonus}</span></div>
+    <div class="fake-id">address : <span>${response.address}</span></div>
+    <div class="fake-id">Weight : <span>${response.weight}</span></div>
+  <div class="fake-id">Phone number : <span>${response.phone_h}</span></div>
+    <div class="fake-id">Birthday : <span>${response.birth_data}</span></div>
+   </div>
+  </div>
+  `;
 }

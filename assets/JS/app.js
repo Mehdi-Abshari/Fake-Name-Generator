@@ -22,6 +22,6 @@ function API(link) {
 
 API();
 
-// console.log(API("https://api.namefake.com/english-states/male").then(
-//   (response)=>{console.log(response);}
-// ));
+console.log(API("https://api.namefake.com/english-states/male").then(
+  (response)=>{console.log(response);}
+));

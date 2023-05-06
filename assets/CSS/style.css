@@ -6,7 +6,6 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
 }
-
 body {
   background-color: #fdebec;
 }
@@ -21,7 +20,6 @@ body {
   background-color: #272c85;
   box-shadow: -2px 7px 20px 4px #272c85;
 }
-
 .title h2 {
   color: #fdebec;
   font-size: 30px;
@@ -34,15 +32,14 @@ body {
   width: 300px;
   margin-bottom: 40px;
 }
-
 select {
   color: #000;
   background-color: #fdebec;
   min-width: 50%;
   min-height: 30px;
   border-radius: 5px;
+  padding: 10px;
 }
-
 button {
   color: #fdebec;
   background-color: transparent;
@@ -57,8 +54,6 @@ button:hover {
   background-color: #fdebec;
   cursor: pointer;
 }
-
-
 .result{
   max-width: 500px;
   margin: 15% auto;
@@ -69,4 +64,9 @@ button:hover {
   border-radius: 10px;
   background-color: #272c85;
   box-shadow: -2px 7px 20px 4px #272c85;
+}
+.fake-id , .fake-id span{
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
 }
