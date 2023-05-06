@@ -13,21 +13,35 @@
 
   <body>
     <div class="container">
-      <div id="title">
+      <div class="title">
         <h2>Fake Profile Generator</h2>
       </div>
       <div id="desk">
-        <p>Select your gender and click on the "Create Profile" button to create a profile for you :)</p>
+        <p>Select your gender and click on the "Create Profile" button to create a fake profile for you :)</p>
       </div>
-      <select>
-        <option>Gender Select</option>
-        <option>Male</option>
-        <option>Female</option>
+      <select id="gender-select">
+        <option value="select">Gender Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
       </select>
-      <button class="btn btn-outline-info m-3">Create Profile</button>
+      <button id="generate-btn">Create Profile</button>
     </div>
 
     <script src="assets/JS/script.js"></script>
     <script src="assets/JS/app.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
