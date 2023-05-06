@@ -1,3 +1,4 @@
+/* All Selector */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,8 @@
 body {
   background-color: #fdebec;
 }
+
+/* Container Style */
 .container {
   max-width: 500px;
   margin: 15% auto;
@@ -20,11 +23,13 @@ body {
   background-color: #272c85;
   box-shadow: -2px 7px 20px 4px #272c85;
 }
+/* Container title Style */
 .title h2 {
   color: #fdebec;
   font-size: 30px;
   margin-bottom: 20px;
 }
+/* Container paragraph Style */
 #desk p {
   color: #fdebec;
   font-size: 15px;
@@ -32,6 +37,8 @@ body {
   width: 300px;
   margin-bottom: 40px;
 }
+
+/* Select Style */
 select {
   color: #000;
   background-color: #fdebec;
@@ -40,6 +47,7 @@ select {
   border-radius: 5px;
   padding: 10px;
 }
+/* Generate button Style */
 button {
   color: #fdebec;
   background-color: transparent;
@@ -49,11 +57,15 @@ button {
   margin-top: 30px;
   transition: all 0.3s;
 }
+/* Generate button hovering Style */
 button:hover {
   color: #000;
   background-color: #fdebec;
   cursor: pointer;
 }
+/* +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ */
+/* JS code Style */
+/* Result page Style */
 .result{
   max-width: 500px;
   margin: 15% auto;
@@ -65,6 +77,7 @@ button:hover {
   background-color: #272c85;
   box-shadow: -2px 7px 20px 4px #272c85;
 }
+/* fake id and fake id span Style */
 .fake-id , .fake-id span{
   color: #fff;
   font-size: 18px;

@@ -3,7 +3,9 @@
 let genderSelect = document.querySelector("#gender-select"),
   // Selecting generator button
   generateBtn = document.querySelector("#generate-btn"),
+  // Selecting container
   container = document.querySelector(".container"),
+  // Selecting body
   body = document.querySelector("body");
 
 // --> Events
@@ -16,6 +18,7 @@ function genderCheck() {
   // User select value
   let userSelGender = genderSelect.value;
 
+  // Set condition for userSelGender
   if (!(userSelGender === "select")) {
     if (userSelGender === "male") {
       API("https://api.namefake.com/english-states/male").then((response) => {
@@ -35,7 +38,7 @@ function genderCheck() {
   }
 }
 
-// Function for create result page 
+// Function for create result page
 function showProfile(response, userSelGender) {
   return `
   <div class="result">
